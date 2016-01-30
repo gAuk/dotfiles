@@ -24,15 +24,29 @@ NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'jpalardy/vim-slime'
 NeoBundle 'scrooloose/syntastic'
+NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'derekwyatt/vim-scala'
+
 "------------ Haskell 関係 -------------
 NeoBundle 'kana/vim-filetype-haskell'
 NeoBundle 'eagletmt/ghcmod-vim'
+"---------------------------------------
 
-""NeoBundle 'https://bitbucket.org/kovisoft/slimv'
+"------------ comment out 関係 -------------
+NeoBundle "tyru/caw.vim.git"
+"-------------------------------------------
+
+"NeoBundle 'https://bitbucket.org/kovisoft/slimv'
+
 call neobundle#end()
 filetype plugin indent on     " required!
 filetype indent on
 NeoBundleCheck
+
+"------------ comment out 関係 -------------
+nmap <C-K> <Plug>(caw:i:toggle)
+vmap <C-K> <Plug>(caw:i:toggle)
+"-------------------------------------------
 
 "----------------------------------------------------
 " 表示関係
